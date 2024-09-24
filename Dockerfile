@@ -1,4 +1,5 @@
 FROM openjdk:8-alpine
-copy **/*.jar /hyma/hyma.jar 
-CMD  ["java","-jar","/hyma/hyma.jar"]
+WORKDIR /hyma
+copy **/*.jar moksha 
+CMD  ["java","-jar","/hyma/moksha"]
 EXPOSE 8080
