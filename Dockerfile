@@ -1,5 +1,5 @@
-FROM openjdk:8-alpine
-WORKDIR /hyma
-copy **/*.jar moksha 
-CMD  ["java","-jar","/hyma/moksha"]
-EXPOSE 8080
+FROM openjdk:17-alpine
+LABEL maintainer "hyma"
+COPY **/*.jar  /hyma/moksha/moksha.jar
+CMD ["java","-jar","/hyma/moksha/moksha.jar]]
+
